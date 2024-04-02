@@ -1,5 +1,6 @@
 return {
   "gaoDean/autolist.nvim",
+  --event = { "LazyLoad" },
   ft = {
     "markdown",
     -- "text",
@@ -8,7 +9,7 @@ return {
     "norg",
   },
   config = function()
-    require('autolist').setup()
+    require("autolist").setup()
 
     function HandleCheckbox()
       local config = require("autolist.config")

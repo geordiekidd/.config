@@ -1,6 +1,6 @@
 return {
   "lewis6991/gitsigns.nvim",
-  event = { "BufReadPre", "BufNewFile" },
+  event = { "LspAttach" },-- "BufReadPre", "BufNewFile" },
   config = function()
     require("gitsigns").setup({
       signs = {

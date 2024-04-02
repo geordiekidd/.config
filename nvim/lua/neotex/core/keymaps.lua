@@ -45,6 +45,7 @@ vim.keymap.set("n", "<C-s>", function()
     })
   )
 end, { remap = true })
+
 -- vim.keymap.set("n", "<C-s>", "z=", { remap = true}) 
 -- keymap("n", "<C-s>", "<cmd>Telescope spell_suggest<cr>", { remap = true})
 
@@ -140,11 +141,8 @@ keymap("v", "J", "gj", opts)
 keymap("v", "K", "gk", opts)
 
 -- VimTeX / LaTeX Keymaps
-keymap("n", "<C-w>", "<cmd>VimtexCountWords<CR>", { silent = true})
 keymap("n", "<S-t>", "<cmd>VimtexToggleMain<CR>", { silent = true})
-keymap("n", "<C-S-l>", "<cmd>!texcount -merge %", { silent = true})
-keymap("n", "<C-S-c>", "<cmd>cd %:p:h<CR> <cmd>w<CR> <cmd>!lualatex -synctex=1 -interaction=nonstopmode -file-line-error %<CR> <cmd>!lualatex -synctex=1 -interaction=nonstopmode -file-line-error %<CR> <cmd>!biber %<CR> <cmd>!lualatex -synctex=1 -interaction=nonstopmode -file-line-error %<CR>", { silent = true})
-keymap("n", "<C-S-r>", "<cmd>cd %:p:h", opts)
+keymap("n", "<C-S-c>", "<cmd>cd %:p:h<CR> <cmd>w<CR> <cmd>!lualatex -synctex=1 -interaction=nonstopmode -file-line-error %<CR> <cmd>!biber %<CR> <cmd>!lualatex -synctex=1 -interaction=nonstopmode -file-line-error %<CR> <cmd>!lualatex -synctex=1 -interaction=nonstopmode -file-line-error %<CR>", { silent = true})
 
 -- keymap("n", "<leader>;", "<Plug>(nvim-surround-insert)", opts)
 -- keymap("n", "<leader>-", "<Plug>(nvim-surround-insert-line)", opts)

@@ -1,3 +1,21 @@
+-- CATPPUCCIN
+return {
+	"catppuccin/nvim",
+	name = "catppuccin",
+	priority = 1000,
+	config = function()
+		require("catppuccin").setup({
+			flavour = "latte",
+			background = {
+				light = "latte",
+				dark = "frappe",
+			},
+		})
+		vim.cmd.colorscheme("catppuccin")
+		vim.o.background = "light"
+	end,
+}
+
 -- BLULOCO
 --return {
 --  'uloco/bluloco.nvim',
@@ -17,29 +35,29 @@
 --}
 
 -- GRUVBOX
-return {
-  "ellisonleao/gruvbox.nvim",
-  priority = 1000, -- make sure to load this before all the other start plugins
-  config = function()
-    require("gruvbox").setup({
-      overrides = {
-        -- THIS BLOCK
-        SignColumn = { bg = "#282828" },
-        NvimTreeCutHL = { fg = "#fb4934", bg = "#282828" },
-        NvimTreeCopiedHL = { fg = "#b8bb26", bg = "#282828" },
-        DiagnosticSignError = { fg = "#fb4934", bg = "#282828" },
-        DiagnosticSignWarn = { fg = "#fabd2f", bg = "#282828" },
-        DiagnosticSignHint = { fg = "#8ec07c", bg = "#282828" },
-        DiagnosticSignInfo = { fg = "#d3869b", bg = "#282828" },
-        -- OR THIS BLOCK
-        -- NvimTreeCutHL = { fg="#fb4934", bg="#3c3836" },
-        -- NvimTreeCopiedHL = { fg="#b8bb26", bg="#3c3836" }
-       -- END
-      }
-    })
-    vim.cmd("colorscheme gruvbox")
-  end,
-}
+--return {
+--    "ellisonleao/gruvbox.nvim",
+--    priority = 1000, -- make sure to load this before all the other start plugins
+--    config = function()
+--        require("gruvbox").setup({
+--            overrides = {
+--                -- THIS BLOCK
+--                SignColumn = { bg = "#282828" },
+--                NvimTreeCutHL = { fg = "#fb4934", bg = "#282828" },
+--                NvimTreeCopiedHL = { fg = "#b8bb26", bg = "#282828" },
+--                DiagnosticSignError = { fg = "#fb4934", bg = "#282828" },
+--                DiagnosticSignWarn = { fg = "#fabd2f", bg = "#282828" },
+--                DiagnosticSignHint = { fg = "#8ec07c", bg = "#282828" },
+--                DiagnosticSignInfo = { fg = "#d3869b", bg = "#282828" },
+--                -- OR THIS BLOCK
+--                -- NvimTreeCutHL = { fg="#fb4934", bg="#3c3836" },
+--                -- NvimTreeCopiedHL = { fg="#b8bb26", bg="#3c3836" }
+--                -- END
+--            }
+--        })
+--       vim.cmd("colorscheme gruvbox")
+--    end,
+--}
 
 -- -- KANAGAWA
 -- return {

@@ -21,6 +21,20 @@ return {
       local hl = "DiagnosticSign" .. type
       vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
     end
+    -- configure ltex server
+    lspconfig["ltex"].setup({
+      capabilities = default,
+      settings = {
+        ltex = {
+          language = "en-AU",
+        },
+      },
+    })
+
+    -- configure texlab server
+    lspconfig["texlab"].setup({
+      capabilities = default,
+    })
 
     -- configure html server
     lspconfig["html"].setup({
@@ -63,5 +77,10 @@ return {
         },
       },
     })
+    -- keymaps
+    vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+    vim.keymap.set("n", "H", vim.lsp.buf.definition, {})
+    vim.keymap.set({ "n", "v" }, "<leader>V", vim.lsp.buf.code_action, {})
+
   end,
 }

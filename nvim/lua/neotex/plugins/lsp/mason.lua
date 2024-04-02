@@ -33,6 +33,8 @@ return {
         -- "html",
         -- "emmet_ls",
         "pyright",
+        "ltex",
+        "texlab",
         -- "tsserver",
         -- "lua_ls",   -- seems to cause trouble
         -- "cssls",
@@ -52,6 +54,7 @@ return {
         "isort",    -- python formatter
         "black",    -- python formatter
         "pylint",   -- python linter
+        "latexindent", -- LaTeX indenter
         -- "eslint_d", -- js linter
       },
     })

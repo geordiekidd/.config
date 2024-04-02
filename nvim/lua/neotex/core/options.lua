@@ -31,9 +31,9 @@ local options = {
   mousemoveevent = true,
 
   -- INDENT
-  tabstop = 4,                    -- insert 2 spaces for a tab
-  shiftwidth = 4,                 -- the number of spaces inserted for each indentation
-  softtabstop = 4,                -- insert 2 spaces for a tab
+  tabstop = 2,                    -- insert 2 spaces for a tab
+  shiftwidth = 2,                 -- the number of spaces inserted for each indentation
+  softtabstop = 2,                -- insert 2 spaces for a tab
   expandtab = true,               -- convert tabs to spaces
   breakindent = true,             -- tab wrapped lines
   linebreak = true,               -- companion to wrap, don't split words
@@ -41,7 +41,7 @@ local options = {
 
   -- EDIT
   spell = true,                   -- turns on spellchecker
-  spelllang = { 'en_us' },        -- sets spelling dictionary
+  spelllang = { 'en_au' },        -- sets spelling dictionary
   clipboard = "unnamedplus",      -- allows neovim to access the system clipboard
   mouse = "a",                    -- allow the mouse to be used in neovim
   mousescroll = "ver:2,hor:4",    -- change the speed of the scroll wheel

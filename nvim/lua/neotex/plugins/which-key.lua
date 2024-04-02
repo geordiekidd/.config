@@ -93,7 +93,7 @@ return {
       d = { "<cmd>update! | bdelete!<CR>", "delete buffer" },
       e = { "<cmd>Neotree<CR>", "explorer" },
       j = { "<cmd>vert sb<CR>", "new split" },
-      -- h = { "<cmd>Alpha<CR>", "home" },
+      h = { "<cmd>Alpha<CR>", "home" },
       i = { "<cmd>VimtexTocOpen<CR>", "index" },
       k = { "<cmd>on<CR>", "max split" },
       q = { "<cmd>wa! | qa!<CR>", "quit" },

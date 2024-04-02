@@ -26,5 +26,6 @@ vim.cmd[[
     " Change default TeXcount argument(s)
     let g:vimtex_texcount_custom_arg = '-merge'
     
-    " This is a comment
+    " Disable VimTeX syntax
+    let g:vimtex_syntax_enabled = 0
 ]]
