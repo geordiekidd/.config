@@ -29,6 +29,13 @@ require("nvim-surround").buffer_setup({
       find = "\\%a-bf%b{}",
       delete = "^(\\%a-bf{)().-(})()$",
     },
+    ["m"] = {
+      add = function()
+        return { { "\\emph{" }, { "}"} }
+      end,
+      find = "\\emph%b{}",
+      delete = "^(\\emph{)().-(})()$",
+    },
     ["i"] = {
       add = { "\\textit{", "}" },
       -- add = function()

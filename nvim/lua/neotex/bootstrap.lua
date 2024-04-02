@@ -13,17 +13,19 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  { import = "neotex.plugins" },    -- main plugins directory
-  { import = "neotex.plugins.lsp" } -- lsp plugins directory
-}, {
-  install = {
-    colorscheme = { "gruvbox" },
-  },
-  checker = {
-    enabled = true,
-    notify = false,
-  },
-  change_detection = {
-    notify = false,
-  },
+	{ import = "neotex.plugins" }, -- main plugins directory
+	{ import = "neotex.plugins.lsp" }, -- lsp plugins directory 
+},
+  {
+    install = {
+      colorscheme = { "catppuccin" },
+    },
+    checker = {
+      enabled = true,
+      notify = false,
+    },
+    change_detection = {
+      notify = false,
+    },
 })
+

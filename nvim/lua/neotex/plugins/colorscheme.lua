@@ -1,27 +1,63 @@
--- GRUVBOX
+-- CATPPUCCIN
 return {
-  "ellisonleao/gruvbox.nvim",
-  priority = 1000, -- make sure to load this before all the other start plugins
-  config = function()
-    require("gruvbox").setup({
-      overrides = {
-        -- THIS BLOCK
-        SignColumn = { bg = "#282828" },
-        NvimTreeCutHL = { fg = "#fb4934", bg = "#282828" },
-        NvimTreeCopiedHL = { fg = "#b8bb26", bg = "#282828" },
-        DiagnosticSignError = { fg = "#fb4934", bg = "#282828" },
-        DiagnosticSignWarn = { fg = "#fabd2f", bg = "#282828" },
-        DiagnosticSignHint = { fg = "#8ec07c", bg = "#282828" },
-        DiagnosticSignInfo = { fg = "#d3869b", bg = "#282828" },
-        -- OR THIS BLOCK
-        -- NvimTreeCutHL = { fg="#fb4934", bg="#3c3836" },
-        -- NvimTreeCopiedHL = { fg="#b8bb26", bg="#3c3836" }
-        -- END
-      }
-    })
-    vim.cmd("colorscheme gruvbox")
-  end,
+	"catppuccin/nvim",
+	name = "catppuccin",
+	priority = 1000,
+	config = function()
+		require("catppuccin").setup({
+			flavour = "latte",
+			background = {
+				light = "latte",
+				dark = "frappe",
+			},
+		})
+		vim.cmd.colorscheme("catppuccin")
+		vim.o.background = "light"
+	end,
 }
+
+-- BLULOCO
+--return {
+--  'uloco/bluloco.nvim',
+--    lazy = false,
+--    priority = 1000,
+--    dependencies = { 'rktjmp/lush.nvim' },
+--    config = function()
+--    -- your optional config goes here, see below.
+--      require("bluloco").setup({
+--        style = "auto",
+--        transparent = false,
+--        italics = true,
+--        guicursor = true,
+--      })
+--      vim.cmd('colorscheme bluloco')
+--  end,
+--}
+
+-- GRUVBOX
+--return {
+--    "ellisonleao/gruvbox.nvim",
+--    priority = 1000, -- make sure to load this before all the other start plugins
+--    config = function()
+--        require("gruvbox").setup({
+--            overrides = {
+--                -- THIS BLOCK
+--                SignColumn = { bg = "#282828" },
+--                NvimTreeCutHL = { fg = "#fb4934", bg = "#282828" },
+--                NvimTreeCopiedHL = { fg = "#b8bb26", bg = "#282828" },
+--                DiagnosticSignError = { fg = "#fb4934", bg = "#282828" },
+--                DiagnosticSignWarn = { fg = "#fabd2f", bg = "#282828" },
+--                DiagnosticSignHint = { fg = "#8ec07c", bg = "#282828" },
+--                DiagnosticSignInfo = { fg = "#d3869b", bg = "#282828" },
+--                -- OR THIS BLOCK
+--                -- NvimTreeCutHL = { fg="#fb4934", bg="#3c3836" },
+--                -- NvimTreeCopiedHL = { fg="#b8bb26", bg="#3c3836" }
+--                -- END
+--            }
+--        })
+--       vim.cmd("colorscheme gruvbox")
+--    end,
+--}
 
 -- -- KANAGAWA
 -- return {
@@ -45,7 +81,7 @@ return {
 --         theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
 --       },
 --       overrides = function(colors) -- add/modify highlights
---         return {}
+--       return {}
 --       end,
 --       theme = "wave", -- Load "wave" theme when 'background' option is not set
 --       background = {

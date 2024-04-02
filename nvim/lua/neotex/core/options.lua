@@ -14,7 +14,7 @@ local options = {
   termguicolors = true,           -- set term gui colors (most terminals support this)
   conceallevel = 0,               -- so that `` is visible in markdown files
   number = true,                  -- set numbered lines
-  relativenumber = true,          -- set relative numbered lines
+  relativenumber = false,          -- set relative numbered lines
   numberwidth = 2,                -- set number column width to 2 {default 4}
   signcolumn = "yes",             -- always show the sign column, otherwise it would shift the text each time
   cursorline = true,              -- highlight the current line
@@ -41,7 +41,7 @@ local options = {
 
   -- EDIT
   spell = true,                   -- turns on spellchecker
-  spelllang = { 'en_us' },        -- sets spelling dictionary
+  spelllang = { 'en_au' },        -- sets spelling dictionary
   clipboard = "unnamedplus",      -- allows neovim to access the system clipboard
   mouse = "a",                    -- allow the mouse to be used in neovim
   mousescroll = "ver:2,hor:4",    -- change the speed of the scroll wheel

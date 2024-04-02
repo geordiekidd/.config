@@ -45,6 +45,7 @@ vim.keymap.set("n", "<C-s>", function()
     })
   )
 end, { remap = true })
+
 -- vim.keymap.set("n", "<C-s>", "z=", { remap = true}) 
 -- keymap("n", "<C-s>", "<cmd>Telescope spell_suggest<cr>", { remap = true})
 
@@ -138,4 +139,20 @@ keymap("n", "J", "gj", opts)
 keymap("n", "K", "gk", opts)
 keymap("v", "J", "gj", opts)
 keymap("v", "K", "gk", opts)
+
+-- VimTeX / LaTeX Keymaps
+keymap("n", "<S-t>", "<cmd>VimtexToggleMain<CR>", { silent = true})
+keymap("n", "<C-S-c>", "<cmd>cd %:p:h<CR> <cmd>w<CR> <cmd>!lualatex -synctex=1 -interaction=nonstopmode -file-line-error %<CR> <cmd>!biber %<CR> <cmd>!lualatex -synctex=1 -interaction=nonstopmode -file-line-error %<CR> <cmd>!lualatex -synctex=1 -interaction=nonstopmode -file-line-error %<CR>", { silent = true})
+
+-- keymap("n", "<leader>;", "<Plug>(nvim-surround-insert)", opts)
+-- keymap("n", "<leader>-", "<Plug>(nvim-surround-insert-line)", opts)
+--    <Plug>(nvim-surround-normal)
+--   <Plug>(nvim-surround-normal-cur)
+--    <Plug>(nvim-surround-normal-line)
+--    <Plug>(nvim-surround-normal-cur-line)
+--    <Plug>(nvim-surround-visual)
+--    <Plug>(nvim-surround-visual-line)
+--    <Plug>(nvim-surround-delete)
+--    <Plug>(nvim-surround-change)
+--    <Plug>(nvim-surround-change-line)
 
