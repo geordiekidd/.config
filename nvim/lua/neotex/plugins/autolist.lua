@@ -1,9 +1,9 @@
 return {
   "gaoDean/autolist.nvim",
-  filetype = {
+  ft = {
     "markdown",
     -- "text",
-    -- "tex",
+    "tex",
     -- "plaintex",
     "norg",
   },

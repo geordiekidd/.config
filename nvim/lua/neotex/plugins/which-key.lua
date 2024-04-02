@@ -91,7 +91,7 @@ return {
       c = { "<cmd>clo<CR>", "close split" },
       -- k = { "<cmd>clo<CR>", "kill split" },
       d = { "<cmd>update! | bdelete!<CR>", "delete buffer" },
-      e = { "<cmd>NvimTreeToggle<CR>", "explorer" },
+      e = { "<cmd>Neotree<CR>", "explorer" },
       j = { "<cmd>vert sb<CR>", "new split" },
       -- h = { "<cmd>Alpha<CR>", "home" },
       i = { "<cmd>VimtexTocOpen<CR>", "index" },

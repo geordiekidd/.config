@@ -14,7 +14,7 @@ local options = {
   termguicolors = true,           -- set term gui colors (most terminals support this)
   conceallevel = 0,               -- so that `` is visible in markdown files
   number = true,                  -- set numbered lines
-  relativenumber = true,          -- set relative numbered lines
+  relativenumber = false,          -- set relative numbered lines
   numberwidth = 2,                -- set number column width to 2 {default 4}
   signcolumn = "yes",             -- always show the sign column, otherwise it would shift the text each time
   cursorline = true,              -- highlight the current line
@@ -31,9 +31,9 @@ local options = {
   mousemoveevent = true,
 
   -- INDENT
-  tabstop = 2,                    -- insert 2 spaces for a tab
-  shiftwidth = 2,                 -- the number of spaces inserted for each indentation
-  softtabstop = 2,                -- insert 2 spaces for a tab
+  tabstop = 4,                    -- insert 2 spaces for a tab
+  shiftwidth = 4,                 -- the number of spaces inserted for each indentation
+  softtabstop = 4,                -- insert 2 spaces for a tab
   expandtab = true,               -- convert tabs to spaces
   breakindent = true,             -- tab wrapped lines
   linebreak = true,               -- companion to wrap, don't split words
