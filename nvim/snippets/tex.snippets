@@ -13,12 +13,9 @@ snippet gloss "Glossary Entry"  b
 
 # beamer frame enviornment
 snippet frame "Beamer Frame" b
-	\begin{frame}
+	\begin{frame}{${1:title}}
 
-		\textbf{${1:label}} ${2:claim}
-		\vspace{.2in}
-		\pause
-
+	${0}
 
 	\end{frame}
 
@@ -88,9 +85,9 @@ snippet up "Use Package" b
 
 # \begin{}...\end{}
 snippet begin "Begin End"
-	\begin{${1:env}}
-		${2:${VISUAL}}
-	\end{$1}${0}
+	\begin{${1}}
+		${0}
+	\end{$1}
 #
 
 # Align(ed)
@@ -128,24 +125,25 @@ snippet enum "Enumerate" b
 #
 
 # Itemize
-snippet item "Itemize" b
+snippet itms "Itemize" b
 	\begin{itemize}
-		\item[${1:\it} ${2:Label:}] ${0}
+		\item ${0}
 	\end{itemize}
 #
 
 #Item
-snippet i "Item"
-	\item[${1:\it} ${2}:] ${0}
+snippet itm "Item"
+	\item ${0}
 #
 
 # Cases
-snippet case "Cases" 
-	${1:LHS}=	
+snippet case "Cases"
+	${1:LHS}=
 	\begin{cases}
 		${2:Value}, &\text{ if } ${3:case}\\
 		${4:Value}, &\text{ otherwise.} ${5:otherwise}.
 	\end{cases}${0}
+
 #
 
 # Section
@@ -295,7 +293,7 @@ snippet thrm "Theorem" bi
 	\end{theorem}
 
 snippet prf "Proof" bi
-	\begin{quote} 
+	\begin{quote}
 		\textit{Proof:} ${0:${VISUAL}}
 	\end{quote}
 
@@ -319,7 +317,48 @@ snippet example "Example" bi
 		${0:${VISUAL}}
 	\end{example}
 
+snippet eex "Expex EX" b
+	%TC:ignore
+	\ex<${1:tag}> ${2:}
+	\xe
+	%TC:endignore
 
+snippet epx "Expex EX" b
+	%TC:ignore
+	\pex<${1:tag}> ${2:}
+		\a<a> ${4:}
+		\a<b> ${6:}
+	\xe
+	%TC:endignore
 
+snippet glex "Glossed example template" b
+	%TC:ignore
+	\ex<${1:tag}>
+		\begingl
+			\gla ${2:}//
+			\glb ${3:}//
+			\glft ${4:}//
+		\endgl
+	\xe
+	%TC:endignore
 
+snippet egloss "Gloss template for pex part" b
+		\begingl
+			\gla ${1:}//
+			\glb ${2:}//
+			\glft ${3:}//
+		\endgl
 
+snippet pgloss "Gloss template for pex part" b
+	\begingl
+		\gla ${1:}//
+		\glb ${2:}//
+		\glft ${3:}//
+	\endgl
+
+snippet schema "RM schema" b
+	\schema[${1:}]{${2:tag}}{
+		\sem 	& ${3:} \\\\
+		\msx	& ${4:} \\\\
+		\phn	& ${5:}
+	}

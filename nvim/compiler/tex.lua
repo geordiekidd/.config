@@ -1,4 +1,4 @@
-vim.cmd[[ 
+vim.cmd[[
     " First create a script-local variable `s:latexmk` to store the latexmk command
     let s:latexmk = 'latexmk -pdf -output-directory=%:h %'
 

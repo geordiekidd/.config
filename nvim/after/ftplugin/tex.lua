@@ -1,13 +1,21 @@
--- local config = require("nvim-surround.config")
+local config = require("nvim-surround.config")
 
 require("nvim-surround").buffer_setup({
   surrounds = {
-    -- ["e"] = {
-    --   add = function()
-    --     local env = require("nvim-surround.config").get_input ("Environment: ")
-    --     return { { "\\begin{" .. env .. "}" }, { "\\end{" .. env .. "}" } }
-    --   end,
-    -- },
+    ["e"] = {
+      add = function()
+        local env = config.get_input ("Environment: ")
+        return { { "\\begin{" .. env .. "}" }, { "\\end{" .. env .. "}" } }
+      end,
+    },
+    ["C"] = {
+      add = function()
+        local cmd = config.get_input ("Command: ")
+        return { { "\\" .. cmd .. "{" }, { "}" } }
+      end,
+      find = "\\.%b{}",
+      delete = "^(\\.{)().-(})()$",
+    },
     ["Q"] = {
       add = { "``", "''" },
       find = "%b``.-''",
@@ -18,32 +26,23 @@ require("nvim-surround").buffer_setup({
       find = "`.-'",
       delete = "^(`)().-(')()$",
     },
-    ["b"] = {
+    ["x"] = {
       add = { "\\textbf{", "}" },
-      -- add = function()
-      --   if vim.fn["vimtex#syntax#in_mathzone"]() == 1 then
-      --     return { { "\\mathbf{" }, { "}" } }
-      --   end
-      --   return { { "\\textbf{" }, { "}" } }
-      -- end,
-      find = "\\%a-bf%b{}",
-      delete = "^(\\%a-bf{)().-(})()$",
+      find = "\\textbf%b{}",
+      delete = "^(\\textbf{)().-(})()$",
+    },
+    ["F"] = {
+      add = { "\\textsf{", "}" },
+      find = "\\textsf%b{}",
+      delete = "^(\\textsf{)().-(})()$",
     },
     ["m"] = {
-      add = function()
-        return { { "\\emph{" }, { "}"} }
-      end,
+      add = { "\\emph{", "}" },
       find = "\\emph%b{}",
       delete = "^(\\emph{)().-(})()$",
     },
     ["i"] = {
       add = { "\\textit{", "}" },
-      -- add = function()
-      --   if vim.fn["vimtex#syntax#in_mathzone"]() == 1 then
-      --     return { { "\\mathit{" }, { "}" } }
-      --   end
-      --   return { { "\\textit{" }, { "}" } }
-      -- end,
       find = "\\%a-it%b{}",
       delete = "^(\\%a-it{)().-(})()$",
     },
@@ -54,12 +53,6 @@ require("nvim-surround").buffer_setup({
     },
     ["t"] = {
       add = { "\\texttt{", "}" },
-      -- add = function()
-      --   if vim.fn["vimtex#syntax#in_mathzone"]() == 1 then
-      --     return { { "\\mathtt{" }, { "}" } }
-      --   end
-      --   return { { "\\texttt{" }, { "}" } }
-      -- end,
       find = "\\%a-tt%b{}",
       delete = "^(\\%a-tt{)().-(})()$",
     },
@@ -68,6 +61,11 @@ require("nvim-surround").buffer_setup({
       -- find = "%b$.-$",
       -- delete = "^($)().-($)()$",
     },
+    ["u"] = {
+      add = { "\\underline{", "}" },
+      find = "\\underline%b{}",
+      delete = "^(\\underline{)().-(})()$",
+    }
   },
 })
 
